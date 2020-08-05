@@ -1,3 +1,3 @@
-java Test2.java
+java Search.java
 @echo off
 pause
