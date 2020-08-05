@@ -16,4 +16,6 @@ After that all these job numbers are going to be saved into the `data.properties
 
 For the next runs, the script maps the job numbers from the new CSV file into the hashmap `hash1` , then it loads the saved file `data.properties` and maps it to the hashmap `hash2` , then using an iterator it checks for the keys in `hash1` that are not present in `hash2` (new jobs) and displays them and appends them to the `data.properties` file using the `save()` method
 
+The script can be optimized but I dont want to put more time in it for the moment
+
 
