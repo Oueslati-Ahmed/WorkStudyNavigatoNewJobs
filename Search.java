@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Search {
     public static void main(String[] args) throws IOException {
-        int[] jobs_old = read("Jobs.csv");
+        int[] jobs_old = read("C:\\Users\\Oueslati.A\\Downloads\\Jobs.csv");
         HashMap<Integer, Integer> hash1 = new HashMap<Integer, Integer>();
         for (int c : jobs_old) {
             if (!hash1.containsKey(c)) {
@@ -38,6 +38,7 @@ public class Search {
         }
 
         save(hash2);
+        Delete();
     }
 
     public static int[] read(String file) throws IOException {
@@ -85,6 +86,14 @@ public class Search {
             ldapContent.put(Integer.parseInt(key), Integer.parseInt(properties.get(key).toString()));
         }
         return (HashMap<Integer, Integer>) ldapContent;
+    }
+
+    public static void Delete() {
+        try {
+            File f = new File("C:\\Users\\Oueslati.A\\Downloads\\Jobs.csv"); // file to be delete
+            f.delete();
+        } catch (Exception e) {
+        }  
     }
 
 }
